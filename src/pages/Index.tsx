@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import FeatureCards from "@/components/FeatureCards";
-import PerformanceSection from "@/components/PerformanceSection";
+import SpecificationsSection from "@/components/SpecificationsSection";
+import FeaturesGrid from "@/components/FeaturesGrid";
 import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
 
@@ -11,8 +11,8 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
-        <FeatureCards />
-        <PerformanceSection />
+        <SpecificationsSection />
+        <FeaturesGrid />
         <GallerySection />
       </main>
       <Footer />

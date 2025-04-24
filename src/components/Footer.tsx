@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,78 +8,82 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-silver-300 to-silver-100 flex items-center justify-center">
-                <span className="text-black font-bold text-xs">AMG</span>
-              </div>
-              <span className="font-bold text-silver-100">Mercedes-AMG</span>
+            <div className="text-xl font-bold text-white mb-4">
+              Mercedes<span className="text-red-500">-AMG</span>
             </div>
             <p className="mb-4">
-              Почувствуйте легендарную мощность Mercedes-AMG S 63 E Performance — гибридного седана премиум-класса, воплощающего передовые технологии и непревзойденную динамику.
+              Mercedes-AMG S 63 — воплощение роскоши и производительности. Флагманский седан с гибридным двигателем мощностью 802 л.с.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-silver-300 hover:text-silver-100">
+              <a href="#" className="text-silver-300 hover:text-red-500 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-silver-300 hover:text-silver-100">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-silver-300 hover:text-silver-100">
+              <a href="#" className="text-silver-300 hover:text-red-500 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-silver-300 hover:text-silver-100">
-                <Linkedin size={20} />
+              <a href="#" className="text-silver-300 hover:text-red-500 transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-silver-300 hover:text-red-500 transition-colors">
+                <Youtube size={20} />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="text-silver-100 font-semibold mb-4">Модельный ряд</h3>
+            <h3 className="text-white font-semibold mb-4">Быстрые ссылки</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="hover:text-silver-100">S-Class</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">E-Class</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">C-Class</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">GLE</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">GLS</Link></li>
+              <li>
+                <a href="/" className="hover:text-red-500 transition-colors">Главная</a>
+              </li>
+              <li>
+                <a href="#specifications" className="hover:text-red-500 transition-colors">Характеристики</a>
+              </li>
+              <li>
+                <a href="#features" className="hover:text-red-500 transition-colors">Особенности</a>
+              </li>
+              <li>
+                <a href="#gallery" className="hover:text-red-500 transition-colors">Галерея</a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-500 transition-colors">Новости</a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-red-500 transition-colors">Контакты</a>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-silver-100 font-semibold mb-4">Сервис</h3>
+            <h3 className="text-white font-semibold mb-4">Контактная информация</h3>
             <ul className="space-y-2">
-              <li><Link to="#" className="hover:text-silver-100">Запись на тест-драйв</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">Конфигуратор</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">Техническое обслуживание</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">Аксессуары</Link></li>
-              <li><Link to="#" className="hover:text-silver-100">Гарантия</Link></li>
+              <li>Москва, ул. Автомобильная, 123</li>
+              <li>+7 (495) 123-45-67</li>
+              <li>info@mercedes-amg.ru</li>
+              <li>
+                <a href="#" className="text-red-500 hover:underline">Запись на тест-драйв</a>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-silver-100 font-semibold mb-4">Контакты</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="mr-2">📍</span>
-                <span>Москва, Ленинградское шоссе, 39А стр. 1</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">📱</span>
-                <span>+7 (495) 123-45-67</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2">✉️</span>
-                <span>info@mercedes-amg.ru</span>
-              </li>
-            </ul>
+            <h3 className="text-white font-semibold mb-4">Подписка на новости</h3>
+            <p className="mb-4">Подпишитесь на наши новости, чтобы быть в курсе последних событий и специальных предложений.</p>
+            <div className="flex space-x-2">
+              <Input placeholder="Ваш email" className="bg-zinc-900 border-zinc-800" />
+              <Button className="bg-red-500 hover:bg-red-600">
+                Подписаться
+              </Button>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-zinc-800 mt-12 pt-8 text-sm text-silver-500 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-zinc-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p>© 2023 Mercedes-AMG. Все права защищены.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="#" className="hover:text-silver-100">Политика конфиденциальности</Link>
-            <Link to="#" className="hover:text-silver-100">Условия использования</Link>
-            <Link to="#" className="hover:text-silver-100">Карта сайта</Link>
+          <div className="mt-4 md:mt-0 flex space-x-4">
+            <a href="#" className="hover:text-red-500 transition-colors">Политика конфиденциальности</a>
+            <a href="#" className="hover:text-red-500 transition-colors">Условия использования</a>
+            <a href="#" className="hover:text-red-500 transition-colors">Карта сайта</a>
           </div>
         </div>
       </div>
